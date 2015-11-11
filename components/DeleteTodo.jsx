@@ -11,8 +11,8 @@ export default class DeleteTodo extends Component {
     )
   }
   handleClick(e) {
-    const node = this.props.todo
-    this.props.onDeleteClick(node)
+    const index = this.props.todo.props.index
+    this.props.onDeleteClick(index)
   }
 }
 

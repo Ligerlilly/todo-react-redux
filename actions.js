@@ -5,7 +5,7 @@
 export const ADD_TODO = 'ADD_TODO'
 export const COMPLETE_TODO = 'COMPLETE_TODO'
 export const SET_VISIBILITY_FILTER = 'SET_VISIBILITY_FILTER'
-
+export const DELETE_TODO = 'DELETE_TODO'
 /*
  * other constants
  */
@@ -19,7 +19,9 @@ export const VisibilityFilters = {
 /*
  * action creators
  */
-
+export function deleteTodo(index) {
+  return { type: DELETE_TODO, index}
+}
 export function addTodo(text) {
   return { type: ADD_TODO, text }
 }
