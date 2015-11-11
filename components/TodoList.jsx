@@ -10,6 +10,7 @@ export default class TodoList extends Component {
                 key={index}
                 index={index}
                 onHandleDelete={this.props.deleteTodo}
+                onHandleUpdate={this.props.updateTodo}
                 onClick={() => this.props.onTodoClick(index)} />
         )}
       </ul>
