@@ -12,14 +12,14 @@ class App extends Component {
     const { dispatch, visibleTodos, visibilityFilter } = this.props
     return (
       <div>
-        <DeleteTodo onDeleteClick={this=>{
-          console.log(this);
-        }} />
         <AddTodo
           onAddClick={text =>
             dispatch(addTodo(text))
           } />
         <TodoList
+          deleteTodo={node =>
+            console.log(node)
+          }
           todos={visibleTodos}
           onTodoClick={index =>
             dispatch(completeTodo(index))

@@ -8,6 +8,7 @@ export default class TodoList extends Component {
         {this.props.todos.map((todo, index) =>
           <Todo {...todo}
                 key={index}
+                onHandleDelete={this.props.deleteTodo}
                 onClick={() => this.props.onTodoClick(index)} />
         )}
       </ul>
@@ -16,6 +17,7 @@ export default class TodoList extends Component {
 }
 
 TodoList.propTypes = {
+  deleteTodo: PropTypes.func.isRequired,
   onTodoClick: PropTypes.func.isRequired,
   todos: PropTypes.arrayOf(PropTypes.shape({
     text: PropTypes.string.isRequired,

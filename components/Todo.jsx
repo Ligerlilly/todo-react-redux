@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react'
+import DeleteTodo from './DeleteTodo'
 
 export default class Todo extends Component {
   render() {
@@ -10,6 +11,7 @@ export default class Todo extends Component {
           cursor: this.props.completed ? 'default' : 'pointer'
         }}>
         {this.props.text}
+        <DeleteTodo onDeleteClick={this.props.onHandleDelete} todo={this} />
       </li>
     )
   }
